@@ -1,5 +1,5 @@
 @echo off
-TITLE Elywing server software for Minecraft: Pocket Edition // No Real utility
+TITLE Elywing server software for Minecraft: Bedrock Edition
 cd /d %~dp0
 
 if exist bin\php\php.exe (
@@ -12,15 +12,16 @@ if exist bin\php\php.exe (
 if exist Elywing*.phar (
 	set POCKETMINE_FILE=Elywing*.phar
 ) else (
-if exist Elywing.phar (
-	set POCKETMINE_FILE=Elywing.phar
-) else (
-	if exist src\pocketmine\PocketMine.php (
-		set POCKETMINE_FILE=src\pocketmine\PocketMine.php
+	if exist Elywing.phar (
+		set POCKETMINE_FILE=Elywing.phar
 	) else (
-		echo "Couldn't find a valid Elywing installation"
-		pause
-		exit 1
+		if exist src\pocketmine\PocketMine.php (
+			set POCKETMINE_FILE=src\pocketmine\PocketMine.php
+		) else (
+			echo "Couldn't find a valid Elywing installation"
+			pause
+			exit 1
+		)
 	)
 )
 
