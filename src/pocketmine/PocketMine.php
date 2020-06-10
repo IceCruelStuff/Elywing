@@ -73,7 +73,7 @@ namespace pocketmine {
 	use pocketmine\wizard\Installer;
 
 	const VERSION = "1.0";
-	const API_VERSION = "3.0.0-ALPHA1";
+	const API_VERSION = "3.0.0";
 	const CODENAME = "Birpen";
 	const MINECRAFT_VERSION = "v1.0.0 alpha";
 	const MINECRAFT_VERSION_NETWORK = "1.0.0";
@@ -92,8 +92,8 @@ namespace pocketmine {
 		@define('pocketmine\PATH', \getcwd() . DIRECTORY_SEPARATOR);
 	}
 
-	if(version_compare("7.0", PHP_VERSION) > 0){
-		echo "[CRITICAL] You must use PHP >= 7.0" . PHP_EOL;
+	if(version_compare("7.2", PHP_VERSION) > 0){
+		echo "[CRITICAL] You must use PHP >= 7.2" . PHP_EOL;
 		echo "[CRITICAL] Please use the installer provided on the homepage." . PHP_EOL;
 		exit(1);
 	}
