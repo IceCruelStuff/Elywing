@@ -1,1 +1,2 @@
-##Elywing has been discontinued. Thanks for everything !
+## Elywing
+Elywing Minecraft: Bedrock Edition server software
